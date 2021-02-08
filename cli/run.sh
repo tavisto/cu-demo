@@ -3,6 +3,7 @@
 if [ -z "$1" ]
   then
     echo "Instance name is required"
+    exit 1
 fi
 NAME=$1
 

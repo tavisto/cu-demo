@@ -6,12 +6,12 @@ resource "google_compute_instance" "default" {
   tags = ["terraform"]
 
   boot_disk {
-    initialie_params {
-      image = "ubuntu-1810-cosmic-v20190307"
+    initialize_params{
+      image = "ubuntu-2004-focal-v20210129"
     }
   }
 
-  network_interaface {
+  network_interface {
     network = "default"
 
     access_config {}
