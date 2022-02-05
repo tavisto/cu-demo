@@ -8,3 +8,5 @@
 # .tfvars files
 *.tfvars
 *account.json
+*key-file
+*.terraform*
