@@ -7,7 +7,7 @@ if [ -z "$1" ]
 fi
 NAME=$1
 
-IMAGE='ubuntu-2004-focal-v20220204'
+IMAGE='debian-11-bullseye-v20221206'
 
 echo "List out any instances we may already have"
 echo "gcloud compute instances list"
@@ -24,7 +24,7 @@ echo gcloud compute --project=cu-demo \
   --service-account=598198349325-compute@developer.gserviceaccount.com \
   --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append \
   --image="${IMAGE}" \
-  --image-project=ubuntu-os-cloud \
+  --image-project=debian-cloud \
   --boot-disk-size=10GB \
   --boot-disk-type=pd-standard \
   --boot-disk-device-name="${NAME}"
@@ -38,7 +38,7 @@ gcloud compute --project=cu-demo \
   --service-account=598198349325-compute@developer.gserviceaccount.com \
   --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append \
   --image="${IMAGE}" \
-  --image-project=ubuntu-os-cloud \
+  --image-project=debian-cloud \
   --boot-disk-size=10GB \
   --boot-disk-type=pd-standard \
   --boot-disk-device-name="${NAME}"

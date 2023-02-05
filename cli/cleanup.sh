@@ -13,4 +13,4 @@ gcloud compute instances list
 
 echo "Remove our test instance"
 echo "gcloud compute instances delete $NAME"
-gcloud compute instances delete $NAME
+gcloud compute instances delete "$NAME"

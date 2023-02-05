@@ -6,8 +6,8 @@ resource "google_compute_instance" "default" {
   tags = ["terraform"]
 
   boot_disk {
-    initialize_params{
-      image = " ubuntu-2004-focal-v20220204"
+    initialize_params {
+      image = "debian-11-bullseye-v20221206"
     }
   }
 
@@ -26,4 +26,13 @@ resource "google_compute_instance" "default" {
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]
   }
+}
+
+output "instance_name" {
+  value = google_compute_instance.default.name
+}
+
+output "instance_info" {
+  value     = google_compute_instance.default
+  sensitive = true
 }
