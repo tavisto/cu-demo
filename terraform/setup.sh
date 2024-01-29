@@ -1,11 +1,6 @@
 #!/bin/bash
 
-if [ -z "$1" ]
-  then
-    echo "Service account required"
-    exit 1
-fi
-SA=$1
+SA=$(gcloud iam service-accounts list --format='value(email)')
 
 echo "Creating key for terraform to use"
 gcloud iam service-accounts keys create key-file \
