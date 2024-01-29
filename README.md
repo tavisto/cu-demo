@@ -18,7 +18,7 @@ https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/gett
         ./cli/run.sh server1
         ./cli/cleanup.sh server1
 
-## Terriform demo
+## Terraform demo
 
 1) install terraform `brew install terraform`
 1) generate account json file `./terraform/setup.sh <service-account-name>`
