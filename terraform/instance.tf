@@ -1,13 +1,13 @@
 resource "google_compute_instance" "default" {
   name         = "terraform-node"
-  machine_type = "g1-small"
+  machine_type = "e2-small"
   zone         = "us-east1-b"
 
   tags = ["terraform"]
 
   boot_disk {
     initialize_params {
-      image = "debian-11-bullseye-v20221206"
+      image = "debian-12-bookworm-v20250113"
     }
   }
 
@@ -21,7 +21,7 @@ resource "google_compute_instance" "default" {
     created_by = "terraform"
   }
 
-  metadata_startup_script = "echo -n Hello from Terraform > /hello.txt"
+  metadata_startup_script = "echo -n Hello from Terraform\n > /hello.txt"
 
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]

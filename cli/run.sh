@@ -7,7 +7,7 @@ if [ -z "$1" ]
 fi
 NAME=$1
 
-IMAGE='debian-11-bullseye-v20221206'
+IMAGE='debian-12-bookworm-v20250113'
 
 echo "List out any instances we may already have"
 echo "gcloud compute instances list"
@@ -17,7 +17,7 @@ echo "Start up an instance using command line flags"
 echo gcloud compute --project=cu-demo \
   instances create "${NAME}" \
   --zone=us-east1-b \
-  --machine-type=g1-small \
+  --machine-type=e2-small \
   --subnet=default \
   --network-tier=PREMIUM \
   --maintenance-policy=MIGRATE \

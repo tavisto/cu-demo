@@ -25,3 +25,16 @@ https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/gett
 1) terraform init
 1) terraform plan
 1) terraform destroy
+
+
+## Commands to run
+
+Show the version on the server
+`lsb_release -a`
+
+Show the file systems
+
+`df -h`
+
+List out the block devices
+`lsblk`
