@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Get gcloud sdk all set up"
-echo "gcloud init"
-gcloud init
+echo "Log in with your Google account"
+echo "gcloud auth login"
+gcloud auth login

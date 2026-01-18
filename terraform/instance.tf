@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = "terraform-node"
+  name         = "terraform-node2"
   machine_type = "e2-small"
   zone         = "us-east1-b"
 

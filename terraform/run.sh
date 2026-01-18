@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-echo "Setup terraform and get all the modules needed ready to go"
-echo "terraform init"
-terraform init
+echo "Setup tf and get all the modules needed ready to go"
+echo "tf init"
+tf init
 
-echo "Apply the terraform to actually run the code to build everything"
-echo "Terraform apply"
-terraform apply
+echo "Apply the tf to actually run the code to build everything"
+echo "tf apply"
+tf apply
 
 echo "Grab the name so we can do something with it."
 
-NAME=$(terraform output -raw instance_name)
+NAME=$(tf output -raw instance_name)
 
 echo "Waiting for cloud instance to finish starting up"
 sleep 20

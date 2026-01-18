@@ -10,7 +10,7 @@ https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/gett
 ## setup
 
 1) clone this repo
-1) install google-cli `brew install google-cloud-sdk`
+1) install google-cli `brew install gcloud-cli`
 1) ./cli/setup.sh
 
 ## Cli demo
