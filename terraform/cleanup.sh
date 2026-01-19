@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-terraform destroy
+tofu destroy
 rm -rf .terraform

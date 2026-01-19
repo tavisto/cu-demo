@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 
-echo "Setup tf and get all the modules needed ready to go"
-echo "tf init"
-tf init
+echo "Setup tofu and get all the modules needed ready to go"
+echo "tofu init"
+tofu init
 
-echo "Apply the tf to actually run the code to build everything"
-echo "tf apply"
-tf apply
+echo "Validate the tofu code to make sure there are no errors"
+echo "tofu validate"
+tofu validate
+
+echo "Apply the tofu to actually run the code to build everything"
+echo "tofu apply"
+tofu apply
 
 echo "Grab the name so we can do something with it."
 
-NAME=$(tf output -raw instance_name)
+NAME=$(tofu output -raw instance_name)
 
 echo "Waiting for cloud instance to finish starting up"
 sleep 20
